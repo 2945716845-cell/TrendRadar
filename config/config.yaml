@@ -299,9 +299,7 @@ notification:
 
     generic_webhook:
       webhook_url: ""                 # 通用 Webhook URL（支持 Discord、Matrix、IFTTT 等）
-      payload_template: ""            # JSON 模板，支持 {title} 和 {content} 占位符
-                                      # 示例：{"content": "{content}"}
-                                      # 留空则使用默认格式：{"title": "{title}", "content": "{content}"}
+      payload_template: "{\"title\":\"{title}\",\"desp\":\"{content}\"}"  # 适配 Server酱 格式
 
 
 # ===============================================================
